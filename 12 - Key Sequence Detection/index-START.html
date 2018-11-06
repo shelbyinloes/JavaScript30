@@ -7,6 +7,18 @@
 </head>
 <body>
 <script>
+  document.addEventListener('keyup', sequenceFun);
+  const arrSeq = ['ArrowUp']
+  let typeSeq = []
+  
+  function sequenceFun(e) {
+    typeSeq.push(e.key)
+    typeSeq.splice(-typeSeq.length - 1, typeSeq.length - arrSeq.length);
+    if(typeSeq.includes('ArrowUp')) {
+      cornify_add();
+    }
+    console.log(typeSeq)
+  }
 </script>
 </body>
 </html>
